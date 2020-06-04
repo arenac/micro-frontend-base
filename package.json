@@ -7,8 +7,8 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --watch",
-    "build": "cross-env NODE_ENV=production webpack"
+    "dev": "NODE_ENV=development webpack --watch",
+    "build": "NODE_ENV=production webpack"
   },
   "dependencies": {
     "react": "^16.13.1",
@@ -24,7 +24,6 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
-    "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "html-webpack-plugin": "^4.3.0",
     "style-loader": "^1.2.1",
