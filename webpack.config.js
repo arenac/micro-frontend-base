@@ -9,7 +9,7 @@ module.exports = {
   mode: process.env.NODE_ENV,
   output: {
     filename: 'bundle.js',
-    publicPath: isProduction ? '/base/' : `${process.env.BASE_URL}/base/`,
+    publicPath: isProduction ? `${process.env.BASE_URL}/base/` : '/base/',
   },
   module: {
     rules: [
@@ -41,7 +41,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      __DISCOVERY_BASE_URL__: isProduction ? '"/"' : '"/cdn/"',
+      __DISCOVERY_BASE_URL__: isProduction ? `"${process.env.BASE_URL}"` : '"/"' ,
     }),
     new HtmlWebpackPlugin(),
   ],
