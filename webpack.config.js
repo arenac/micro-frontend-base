@@ -1,3 +1,4 @@
+
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -7,7 +8,7 @@ module.exports = {
   mode: process.env.NODE_ENV,
   output: {
     filename: 'bundle.js',
-    publicPath: isProduction ? './' : '/cdn/base/',
+    publicPath: isProduction ? '/base/' : '/cdn/base/',
   },
   module: {
     rules: [
