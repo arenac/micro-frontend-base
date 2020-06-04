@@ -1,4 +1,5 @@
 
+require('dotenv/config');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -8,7 +9,7 @@ module.exports = {
   mode: process.env.NODE_ENV,
   output: {
     filename: 'bundle.js',
-    publicPath: isProduction ? '/base/' : '/cdn/base/',
+    publicPath: isProduction ? '/base/' : `${process.env.BASE_URL}/base/`,
   },
   module: {
     rules: [
